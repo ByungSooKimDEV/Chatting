@@ -1,0 +1,4 @@
+/* 가로 너비가 530px 이상인 화면에서 .bigScreenText 클래스를 가진 요소를 사용하여 전체 화면을 가리키는 배경 영역을 만드는 것입니다. */
+.bigScreenText {
+	display: none;
+}
