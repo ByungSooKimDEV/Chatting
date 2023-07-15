@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+		<link
+			rel="stylesheet"
+			href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+			integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+			crossorigin="anonymous"
+		/>
+		<link rel="apple-touch-icon" href="images/kakaofriends.png" />
+		<link rel="apple-touch-startup-image" href="images/kakaofriends.png" />
+		<title>Chats</title>
+		<link rel="stylesheet" href="css/style.css" />
+	</head>
+	<body>
+		<header class="top-header">
+			<div class="header__top">
+				<div class="header__column">
+					<i class="fas fa-plane"></i>
+					<i class="fas fa-wifi"></i>
+				</div>
+				<div class="header__column">
+					<span class="header__time">18:38</span>
+				</div>
+				<div class="header__column">
+					<i class="fas fa-moon"></i>
+					<i class="fab fa-bluetooth-b"></i>
+					<span class="header__battery">66% <i class="fas fa-battery-three-quarters"></i></span>
+				</div>
+			</div>
+			<div class="header__bottom">
+				<div class="header__column">
+					<span class="headere__text">Edit</span>
+				</div>
+				<div class="header__column">
+					<span class="header__text">Chats <i class="fas fa-caret-down"></i></span>
+				</div>
+				<div class="header__column"></div>
+			</div>
+		</header>
+		<main class="chats">
+			<div class="search-bar">
+				<!-- <i class="fas fa-search"></i> -->
+				<input type="text" placeholder="&#xf002; Find friends, chats, Plus Friends" />
+			</div>
+			<ul class="chats__list">
+				<li class="chats__chat">
+					<a href="chat.html">
+						<div class="chat__content">
+							<img src="images/avatar.jpg" alt="avatar" />
+							<div class="chat__preview">
+								<h3 class="chat__user">Ranee</h3>
+								<span class="chat__last-message"> Hello! This is a message. </span>
+							</div>
+						</div>
+						<span class="chat__date-time"> 15:55 </span>
+					</a>
+				</li>
+				<li class="chats__chat">
+					<a href="chat.html">
+						<div class="chat__content">
+							<img src="images/avatar.jpg" alt="avatar" />
+							<div class="chat__preview">
+								<h3 class="chat__user">Ranee</h3>
+								<span class="chat__last-message"> Hello! This is a message. </span>
+							</div>
+						</div>
+						<span class="chat__date-time"> 15:55 </span>
+					</a>
+				</li>
+				<li class="chats__chat">
+					<a href="chat.html">
+						<div class="chat__content">
+							<img src="images/avatar.jpg" alt="avatar" />
+							<div class="chat__preview">
+								<h3 class="chat__user">KakaoTalk</h3>
+								<span class="chat__last-message"> You logged into KakaoTalk PC from the PC </span>
+							</div>
+						</div>
+						<span class="chat__date-time"> Jul 29 </span>
+					</a>
+				</li>
+			</ul>
+			<!-- <div class="chat-btn">
+				<i class="fas fa-comment"></i>
+				<i class="fas fa-plus"></i>
+			</div> -->
+		</main>
+
+		<nav class="tab-bar">
+			<a href="index.html" class="tab-bar__tab">
+				<i class="fas fa-user"></i>
+				<span class="tab-bar__title">Friends</span>
+			</a>
+			<a href="chats.html" class="tab-bar__tab tab-bar__tab--selected">
+				<i class="fas fa-comment"></i>
+				<span class="tab-bar__title">Chats</span>
+			</a>
+			<div class="tab-bar__tab">
+				<i class="fas fa-search"></i>
+				<span class="tab-bar__title">Find</span>
+			</div>
+			<div class="tab-bar__tab">
+				<i class="fas fa-ellipsis-h"></i>
+				<span class="tab-bar__title">More</span>
+			</div>
+			<!-- <a href="find.html" class="tab-bar__tab">
+        <i class="fas fa-search"></i>
+        <span class="tab-bar__title">Find</span>
+      </a>
+			<a href="more.html" class="tab-bar__tab">
+				<i class="fas fa-ellipsis-h"></i>
+				<span class="tab-bar__title">More</span>
+			</a> -->
+		</nav>
+
+		<div class="bigScreenText">
+			<span>Please make your screen smaller</span>
+		</div>
+	</body>
+</html>
