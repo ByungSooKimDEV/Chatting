@@ -29,7 +29,7 @@
 					<i class="fas fa-wifi"></i>
 				</div>
 				<div class="header__column">
-					<span class="header__time">18:38</span>
+					<span class="header__time"><%=new Date().toLocaleTimeString('en-US', { hour12: false }).slice(0, 5);%></span>
 				</div>
 				<div class="header__column">
 					<i class="fas fa-moon"></i>
@@ -42,7 +42,7 @@
 					<span class="headere__text">Manage</span>
 				</div>
 				<div class="header__column">
-					<span class="header__text"> Friends <span class="header__number">1</span> </span>
+					<span class="header__text"> Friends <span class="header__number"><%=(data.length - 1)%></span> </span>
 				</div>
 				<div class="header__column">
 					<i class="fas fa-cog"></i>
@@ -60,13 +60,9 @@
 				<div class="friends__section-rows">
 					<div class="friends__section-row">
 						<div>
-							<img src="images/avatar.jpg" alt="avatar" />
-							<span class="friends__section-name">Sangseok</span>
+							<img src="<%= loginUser.userIcon%>" alt="avatar" />
+							<span class="friends__section-name"><%= loginUser.alias%></span>
 						</div>
-					</div>
-					<div class="friends__section-row">
-						<img src="images/avatar.jpg" alt="avatar" />
-						<span class="friends__section-name">Friends' Names Display</span>
 					</div>
 				</div>
 			</section>
@@ -74,6 +70,20 @@
 				<header class="friends__section-header">
 					<h6 class="friends__section-title">Friends</h6>
 				</header>
+				<div class="friends__section-rows">
+					<% for (var i=0; i < data.length ; i++){ if (data[i].userId != loginUser.userId) {%>
+					<div class="friends__section-row">
+						<div>
+							<img src="<%= data[i].userIcon%>" alt="avatar" />
+							<span class="friends__section-name"><%= data[i].alias%></span>
+						</div>
+					</div>
+					<% }} %>
+					<!-- <div class="friends__section-row">
+						<img src="images/avatar.jpg" alt="avatar" />
+						<span class="friends__section-name">Friends' Names Display</span>
+					</div> -->
+				</div>
 			</section>
 		</main>
 
@@ -101,7 +111,7 @@
 		</div>
 
 		<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-		<script>
+		<!-- <script>
 			// function getMemberList() {
 			// 	axios.get('http://localhost:7000/users').then((response) => {
 			// 		console.log(`멤버 목록 : ${JSON.stringify(response)}`);
@@ -167,6 +177,6 @@
 			}
 
 			getMemberList();
-		</script>
+		</script> -->
 	</body>
 </html>

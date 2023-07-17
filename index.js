@@ -238,8 +238,24 @@ app.get('/', function (req, res) {
 });
 
 app.get('/index', isAuthenticated, function (req, res) {
-	console.log(`req.user 확인 : ${req.user}`);
-	res.render('index.ejs', { 사용자: req.user });
+	console.log(`[get/index] req.user 확인 : ${req.user}`);
+
+	pool.getConnection()
+		.then((conn) => {
+			conn.query('SELECT * FROM member')
+				.then((rows) => {
+					conn.release();
+					console.log(`[get/index] ${rows}`);
+					res.render('index.ejs', { data: rows, loginUser: req.user });
+				})
+				.catch((err) => {
+					conn.release();
+					res.status(500).json({ error: err });
+				});
+		})
+		.catch((err) => {
+			res.status(500).json({ error: err });
+		});
 });
 
 // 로그인
